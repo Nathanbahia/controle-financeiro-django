@@ -1,18 +1,45 @@
 {% load bootstrap4 %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Main</title>
 	<meta charset="utf=8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 	{% bootstrap_css %}
+	<link rel="stylesheet" href="{% static 'css/pushy.css' %}">
+	<link rel="stylesheet" href="{% static 'css/geral.css' %}">
 </head>
 <body>
-	<h1>Django Web Framework</h1>
+	<header class="site-header push fixed-top">
+		<div class="row">
+			<div class="col-2"><button class="menu-btn">&#9776; Menu</button></div>
+			<div class="col-10"><h1>Jump</h1></div>
+		</div>
+	</header>
+	
+    <!-- Pushy Menu -->
+    <nav class="pushy pushy-left" data-focus="#first-link">
+        <div class="pushy-content">
+            <ul>
+                <li class="pushy-link"><a href="#">Dashbord</a></li>
+                <li class="pushy-link"><a href="#">Categorias</a></li>
+                <li class="pushy-link"><a href="#">Registros</a></li>
+                <li class="pushy-link"><a href="#">Créditos</a></li>
+            </ul>
+        </div>
+    </nav>
 	
 	{% block content %}
 
 
 	{% endblock %}
 	
+	<footer class="footer fixed-bottom w-100 bg-dark m-0 p-0 text-center">
+		<p>Desenvolvido por Nathan Bahia</p>
+	</footer>
+
+{% bootstrap_javascript jquery="full" %}
+<script src="{% static 'js/pushy.min.js' %}"></script>
 </body>
 </html>
