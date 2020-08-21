@@ -1,6 +1,6 @@
 ﻿# CONTROLE FINANCEIRO EM DJANGO
 
-[![Build Status](https://travis-ci.com/Nathanbahia/sistema-financeiro.svg?token=ZM7fThBeLMqVGpgxzwNV&branch=master)](https://travis-ci.com/Nathanbahia/sistema-financeiro)
+[![Build Status](https://travis-ci.com/Nathanbahia/controle-financeiro-django.svg?branch=master)](https://travis-ci.com/Nathanbahia/controle-financeiro-django)
 
 ### SISTEMA DE CONTROLE DE RECEITAS E DESPESAS
 
