@@ -7,38 +7,29 @@
 	<div class="row">
 		<div class="col-12">
 			<small>Saldo</small>
-			<h2 class="m-1">R$ 2.071,00</h2>
+			<h2 class="m-1">R$ 2.000,00</h2>
 		</div>
 		<div class="col-12">
 			<div class="row mt-3">
 				<div class="col-6">
 					<small>Receitas</small>
-					<p class="mt-1">R$ 1.075,00</p>
+					<p class="mt-1 receitas">R$ 3.075,00</p>
 				</div>
 				<div class="col-6">
 					<small>Despesas</small>
-					<p class="mt-1">R$ 1.075,00</p>
+					<p class="mt-1 despesas">R$ 1.075,00</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="card painel-secundario">
-	<div class="row">
-		<div class="col-6 p-0 text-center">
-			<img src="https://image.flaticon.com/icons/svg/1170/1170601.svg" width="150" class="ml-2 py-2">
-		</div>
-		<div class="col-6">
-			<ul>
-				<li>Alimentação</li>
-				<li>Transporte</li>
-				<li>Saúde</li>
-				<li>Educação</li>
-				<li>Vestuário</li>
-			</ul>
-		</div>
-	</div>
+<div class="painel-secundario">
+    <div id="donutchart" class=""></div>
+</div>
+
+<div class="painel-terciario">
+    <div id="chart_div" class=""></div>
 </div>
 
 {% endblock %}

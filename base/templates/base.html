@@ -7,6 +7,7 @@
 	<meta charset="utf=8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 	{% bootstrap_css %}
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="{% static 'css/pushy.css' %}">
 	<link rel="stylesheet" href="{% static 'css/geral.css' %}">
 </head>
@@ -29,17 +30,33 @@
             </ul>
         </div>
     </nav>
+    
+    <form class="mt-5 container">
+        <div class="form-group w-80">
+            <label>Mês:</label>
+            <select class="form-control select-mes">
+                <option value="">Jan/2020</option>
+                <option value="">Fev/2020</option>
+                <option value="">Mar/2020</option>
+                <option value="">Abr/2020</option>
+                <option value="">Mai/2020</option>
+                <option value="">Jun/2020</option>
+                <option value="">Jul/2020</option>
+                <option value="">Ago/2020</option>
+            </select>
+        </div>
+    </form>
 	
 	{% block content %}
 
 
 	{% endblock %}
 	
-	<footer class="footer fixed-bottom w-100 bg-dark m-0 p-0 text-center">
-		<p>Desenvolvido por Nathan Bahia</p>
-	</footer>
 
 {% bootstrap_javascript jquery="full" %}
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="{% static 'js/painel-secundario.js' %}"></script>
+<script src="{% static 'js/painel-terciario.js' %}"></script>
 <script src="{% static 'js/pushy.min.js' %}"></script>
 </body>
 </html>
