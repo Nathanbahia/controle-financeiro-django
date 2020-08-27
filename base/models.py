@@ -16,7 +16,7 @@ class BaseUser(models.Model):
 class Categoria(models.Model):
     user = models.ForeignKey('BaseUser', on_delete=models.CASCADE)
     tipo = models.CharField('Tipo', max_length=8, choices=TIPOS)
-    categoria = models.CharField('Categoria', max_length = 50)
+    categoria = models.CharField('Categoria', max_length=50)
 
     class Meta:
         verbose_name = 'Categoria'

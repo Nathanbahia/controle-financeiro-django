@@ -3,10 +3,10 @@ from .models import BaseUser, Categoria, Movimento
 
 
 def index(request):
-    user = BaseUser.objects.filter(email = 'nathanbabahia@gmail.com')[0]
-    receitas = Movimento.objects.filter(user = user.id)
+    user = BaseUser.objects.filter(email='nathanbabahia@gmail.com')[0]
+    receitas = Movimento.objects.filter(user=user.id)
 
     context = {
-        'receitas': receitas,        
+        'receitas': receitas,
         }
     return render(request, 'index.html', context)
