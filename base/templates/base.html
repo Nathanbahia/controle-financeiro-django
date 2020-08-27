@@ -7,15 +7,16 @@
 	<meta charset="utf=8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 	{% bootstrap_css %}
-	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&family=Gugi&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
 	<link rel="stylesheet" href="{% static 'css/pushy.css' %}">
 	<link rel="stylesheet" href="{% static 'css/geral.css' %}">
 </head>
 <body>
-	<header class="site-header push fixed-top">
+	<header class="site-header fixed-top push mb-5 shadow">
 		<div class="row">
-			<div class="col-2"><button class="menu-btn">&#9776; Menu</button></div>
-			<div class="col-10"><h1>Jump</h1></div>
+			<div class="col-2"><button class="menu-btn">&#9776;</button></div>
+			<div class="col-10"><h1 class="logo text-right mr-3 mt-3 p-0">Jump</h1></div>
 		</div>
 	</header>
 	
@@ -26,15 +27,15 @@
                 <li class="pushy-link"><a href="#">Dashbord</a></li>
                 <li class="pushy-link"><a href="#">Categorias</a></li>
                 <li class="pushy-link"><a href="#">Registros</a></li>
-                <li class="pushy-link"><a href="#">Créditos</a></li>
+                <li class="pushy-link"><a href="#">Sair</a></li>
             </ul>
         </div>
     </nav>
     
-    <form class="mt-5 container">
-        <div class="form-group w-80">
+    <form class="container mx-auto my-3 p-0 selecao-mes">
+        <div class="form-group">
             <label>Mês:</label>
-            <select class="form-control select-mes">
+            <select class="form-control">
                 <option value="">Jan/2020</option>
                 <option value="">Fev/2020</option>
                 <option value="">Mar/2020</option>
@@ -53,10 +54,8 @@
 	{% endblock %}
 	
 
+
 {% bootstrap_javascript jquery="full" %}
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script src="{% static 'js/painel-secundario.js' %}"></script>
-<script src="{% static 'js/painel-terciario.js' %}"></script>
 <script src="{% static 'js/pushy.min.js' %}"></script>
 </body>
 </html>
