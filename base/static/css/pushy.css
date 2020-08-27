@@ -537,11 +537,13 @@ ul {
 
 /* Menu Button */
 .menu-btn {
-  width: 100px;
-  padding: 10px;
+  width: 50px;
+  padding: 12px 0;
   margin-bottom: 30px;
-  background: #000;
-  color: #FFF;
+  background: #015a6b;
+  color: #ffc107;
+  font-size: 30px;
+  font-weight: bolder;
   text-align: center;
   cursor: pointer;
   border: 0px;
@@ -553,27 +555,15 @@ ul {
 /* Header */
 .site-header {
   position: fixed;
-  background: #000;
+  background: #015a6b;
   color: #FFF;
   width: 100%;
-  padding: 5px 0;
-  text-align: center;
+  height: 70px;
+  line-height: 70px;
+  vertical-align: middle;
+  padding: 0;
   z-index: 9998;
 }
-
-/* Footer */
-.site-footer {
-  position: relative;
-  border-top: 1px solid #EEE;
-  color: #999;
-  padding: 10px;
-  font-size: 0.8em;
-  text-align: center;
-}
-
-/*# sourceMappingURL=demo.css.map */
-
-
 
 
 /*! Pushy - v1.3.0 - 2019-6-25

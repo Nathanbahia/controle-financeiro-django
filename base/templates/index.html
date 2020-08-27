@@ -3,42 +3,54 @@
 
 {% block content %}
 
-<div class="card painel-principal">
+<!-- Painel Principal -->
+<div class="card container-sm mx-auto my-4 p-2 text-center painel-principal">
 	<div class="row">
 		<div class="col-12">
 			<small>Saldo</small>
-			<h2 class="m-1">R$ 2.071,00</h2>
+			<h2 class="m-1 saldo">R$ 2.000,00</h2>
 		</div>
 		<div class="col-12">
 			<div class="row mt-3">
 				<div class="col-6">
-					<small>Receitas</small>
-					<p class="mt-1">R$ 1.075,00</p>
+						<small>Receitas</small>
+						<h3 class="mt-1 total_receitas">R$ 3.075,00</h3>
 				</div>
 				<div class="col-6">
 					<small>Despesas</small>
-					<p class="mt-1">R$ 1.075,00</p>
+					<h3 class="mt-1 total_despesas">R$ 1.075,00</h3>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="card painel-secundario">
-	<div class="row">
-		<div class="col-6 p-0 text-center">
-			<img src="https://image.flaticon.com/icons/svg/1170/1170601.svg" width="150" class="ml-2 py-2">
-		</div>
-		<div class="col-6">
-			<ul>
-				<li>Alimentação</li>
-				<li>Transporte</li>
-				<li>Saúde</li>
-				<li>Educação</li>
-				<li>Vestuário</li>
-			</ul>
-		</div>
-	</div>
-</div>
+
+{% include 'modal.html' %}
+
+
+<!-- Registros -->
+<section class="container-fluid">
+    <h2 class="mt-5 mb-3 ml-2 font-weight-bold">REGISTROS</h2>
+    <table class="table">
+        <thead>
+            <th>Data</th>
+            <th>Categoria</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th colspan="2" class="text-center">Ação</th>
+        </thead>
+        {% for i in receitas %}
+            <tr class="{{ i.categoria.tipo }}">
+                <td>{{ i.data |date:"d/m/y" }}</td>
+                <td>{{ i.categoria.categoria }}</td>
+                <td>{{ i.descricao }}</td>
+                <td>{{ i.valor|floatformat:2 }}</td>
+                <td><i class="fas fa-edit"></i></td>
+                <td><i class="fas fa-trash"></i></td>
+           </tr>
+        {% endfor %}
+    </table>
+</section>
 
 {% endblock %}

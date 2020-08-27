@@ -1,34 +1,65 @@
 body {
-	background: #484848;
-	padding-top: 50px;
+	padding-top: 70px;
+	font-family: Roboto;
+	background-color: #dedfdc;
 }
 
-header .row button, header .row h1 {
-	margin: 0;
-	text-align: right;
-	padding-right: 20px;
+.logo {
+	font-family: Lobster;
+	color: #ffc107;
 }
 
-header h1 {
-	color: #fdbf00;
+.painel-principal {
+	color: white;
+	background-color: #015a6b;
+	font-family: 'Gugi', cursive;
+	letter-spacing: 1px;
 }
 
-.painel-principal, .painel-secundario {
-	text-align: center;
-	background-color: #121212;
-	color: #ccc;
-	margin: 30px 10px;
-	border-radius: 20px;
-}
-
-.painel-secundario ul {
-	list-style: none;
-	text-align: left;
-	padding: 10px 0;
-}
-
-.footer p {
+.saldo {
+	color: #ffc107;
 	font-weight: bold;
-	color: #fdbf00;
-	font-family: Monospace;
+	font-size: 36px;
+	text-shadow: 1px 1px black;
+}
+
+.total_receitas {
+	color: #348a5d;
+	font-weight: bold;
+	text-shadow: 1px 1px black;
+}
+
+.total_despesas {
+	color: #ad2c34;
+	font-weight: bold;
+	text-shadow: 1px 1px black;
+}
+
+.table tbody {
+	color: white;
+}
+
+.RECEITAS {
+	background-color: #348a5d;
+}
+
+.DESPESAS {
+	background-color: #ad2c34;
+}
+
+
+@media screen and (max-width: 680px) {
+	.painel-principal, .selecao-mes {
+		width: 300px;
+	}
+	
+	table {
+		font-size: 10px;
+	}
+}
+
+@media screen and (min-width: 681px) {
+	.painel-principal, .selecao-mes {
+		width: 500px;
+	}
 }
